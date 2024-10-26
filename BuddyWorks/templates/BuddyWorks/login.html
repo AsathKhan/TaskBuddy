@@ -10,11 +10,11 @@
 <body>
     <div class="login-container">
         <h1>Login to TaskBuddy</h1>
-        <form method="POST" action="{% url 'loginURL' %}">
+        <form method="POST" action="">
             {% csrf_token %}
 
-            <div>{{form.username}}</div>
-            <div>{{form.password}}</div>
+            <div class="form-group">{{form.username}}</div>
+            <div class='form-group'>{{form.password}}</div>
     
             <div>
                 {% if messages %}
@@ -26,7 +26,7 @@
                 {% endif %}
                 <button type="submit" class="login-button">submit</button>
         </form>
-        <p class="signup-link">Don't have an account?<a href=" ">Sign Up</a></p>
+        <p class="signup-link">Don't have an account?  <a href=" ">Sign Up</a></p>
         </div>
     </div>
 </body>
