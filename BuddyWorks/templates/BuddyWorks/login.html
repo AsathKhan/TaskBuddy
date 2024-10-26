@@ -10,7 +10,7 @@
 <body>
     <div class="login-container">
         <h1>Login to TaskBuddy</h1>
-        <form method="POST" action="">
+        <form method="POST" action="{% url 'loginURL' %}">
             {% csrf_token %}
 
             <div>{{form.username}}</div>
@@ -24,8 +24,9 @@
                     {% endfor %}
                 </div>
                 {% endif %}
+                <button type="submit" class="login-button">submit</button>
         </form>
-        <p>Don't have an account?<a href=" ">Sign Up</a></p>
+        <p class="signup-link">Don't have an account?<a href=" ">Sign Up</a></p>
         </div>
     </div>
 </body>
