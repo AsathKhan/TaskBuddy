@@ -1,1 +1,38 @@
-{% extends "BuddyWorks/login.html" %} 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'BuddyWorks/css/signup.css' %}">
+    
+</head>
+<body>
+    <div class="signup-container">
+        <h1>Create an Account</h1>
+        <form method="POST">
+            {% csrf_token %}
+
+            <label for="username">UserName</label>
+            <input id="username" type="text" name="username" required>
+
+            <label for="email">Email</label>
+            <input id="email" type="email" name="email" required>
+
+            <label for="CreatePassword">Password</label>
+            <input id="createPassword" type="password" name="password1" required>
+
+            <label for="confirmPassword"> Confirm Password</label>
+            <input id="confirmPassword" type="password" name="password2" required>
+
+            <button type="submit">Sign Up</button>
+        </form>
+
+        <div class="login-link">
+            <p>Alread have an account? <a href="{% url 'loginURL' %}">Login here👇</a></p>
+        </div>
+    </div>
+
+</body>
+</html>

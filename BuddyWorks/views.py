@@ -34,4 +34,4 @@ def signup_view(request):
     else:
         form = SignUpForm()
 
-    return render(request, "BuddyWorks/signup.html")
+    return render(request, "BuddyWorks/signup.html", {"form":form})
