@@ -31,6 +31,8 @@ def signup_view(request):
             user = form.save()
             login(request, user)
             return redirect("loginURL")
+        else:
+            messages.error(request, '')
     else:
         form = SignUpForm()
 
