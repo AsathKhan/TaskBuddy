@@ -1,4 +1,6 @@
 from django import forms 
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.models import User
 
 class LoginForm(forms.Form):
     username = forms.CharField(max_length=150, required=True, 
@@ -11,3 +13,10 @@ class LoginForm(forms.Form):
                                     'placeholder': 'Password',
                                     'class': 'input-field'}),
                                required=True)
+    
+class SignUpForm(UserCreationForm):
+    email = forms.EmailField(required=True)
+    
+    class Meta:
+        model = User
+        fields = ["username", "email", "password1", "password2"]

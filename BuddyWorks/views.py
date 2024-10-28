@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
 from django.contrib import messages
-from .forms import LoginForm
+from .forms import LoginForm, SignUpForm
 
 # Create your views here.
 def index_view(request):
@@ -23,3 +23,15 @@ def login_view(request):
     else:
         form = LoginForm()
     return render(request, 'BuddyWorks/login.html', {'form':form})
+
+def signup_view(request):
+    if request.method == "POST":
+        form = SignUpForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            login(request, user)
+            return redirect("loginURL")
+    else:
+        form = SignUpForm()
+
+    return render(request, "BuddyWorks/signup.html")
