@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
-from django.contrib.auth.decorators import user_passes_test
+from django.contrib.auth.decorators import user_passes_test, login_required
 from django.contrib import messages
 from .forms import LoginForm, SignUpForm
 
@@ -28,6 +28,7 @@ def login_view(request):
                 login(request, user)
                 messages.success(request, 'Login Successful')
                 return redirect('dashboardURL')
+                return redirect('dashboardURL')
             else:
                 messages.error(request, "Inavlid username or passowrd")
     else:
@@ -49,5 +50,6 @@ def signup_view(request):
 
     return render(request, "BuddyWorks/signup.html", {"form":form})
 
+@login_required
 def dashboard_view(request):
     return render(request, 'BuddyWorks/dashboard.html')

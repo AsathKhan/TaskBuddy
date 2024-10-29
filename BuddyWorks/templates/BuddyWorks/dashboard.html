@@ -3,9 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dashboard</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'BuddyWorks/css/dashboard.css' %}">
+    <script src="{% static 'BuddyWorks/js/dashboard.js' %}" defer></script>
 </head>
 <body>
+    <div class="dashboard-container">
+        <header>
+            <h1 id="greeting" data-username="{{request.user.username}}"></h1>
+        </header>
+
+        <nav class="tabs">
+            <button class="tab active" data-target="#home">Home</button>
+            <button class="tab" data-target="#profile">Profile</button>
+            <button class="tab" data-target="#settings">Settings</button>
+        </nav>
+
+        <section id="home" class="tab-content hidden">
+            <h2>Home</h2>
+            <p>Welcome to your dashboard home.<br>Here you can find an overview of your activities and notifications.</p>
+        </section>
+
+        <section id="#profile" class="tab-content hidden">
+            <h2>Profile</h2>
+            <p>Manage your profile information here.</p>
+        </section>
+
+        <section id="settings" class="tab-content hidden">
+            <h2>Settings</h2>
+            <p>configure your account settings and preferences here.</p>
+        </section>
+
+        <button class="toggle-button" data-target="#extra-content">Toggle Extra Content</button>
+
+        <div id="extra-content" class="hidden">
+            <h2>Extra content</h2>
+            <p>This section can be toggled on and off</p>
+        </div>
+        
+    </div>
     
 </body>
 </html>
