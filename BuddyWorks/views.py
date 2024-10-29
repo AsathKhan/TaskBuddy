@@ -28,7 +28,6 @@ def login_view(request):
                 login(request, user)
                 messages.success(request, 'Login Successful')
                 return redirect('dashboardURL')
-                return redirect('dashboardURL')
             else:
                 messages.error(request, "Inavlid username or passowrd")
     else:
@@ -42,7 +41,7 @@ def signup_view(request):
         if form.is_valid():
             user = form.save()
             login(request, user)
-            return redirect("loginURL")
+            return redirect("dashboardURL")
         else:
             messages.error(request, '')
     else:

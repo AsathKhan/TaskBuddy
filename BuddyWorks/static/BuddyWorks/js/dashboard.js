@@ -15,4 +15,40 @@ function displayGreeting(){
 
     greetingElement.textContent = `${greetingText}, ${greetingElement.dataset.username}!`;
 }
+
+
+function setupTabs(){
+    const tabs = document.querySelectorAll(".tab");
+    const contents = document.querySelectorAll('.tab-content');
+
+    tabs.forEach((tab, index) =>{
+        tab.addEventListener("click", ()=> {
+            //removes "active" class from all buttons
+            tabs.forEach(t => t.classList.remove("active"));
+            //hides all contents
+            contents.forEach(content => content.classList.add("hidden"));
+    
+            //only add "active" to clicked button
+            tab.classList.add('active');
+            contents[index].classList.remove("hidden");
+        });
+    });
+}
+
+
+function setupToggles(){
+    const toggleButtons = document.querySelectorAll('.toggle-button');
+
+    toggleButtons.forEach(toggleButton => {
+        toggleButton.addEventListener('click', () =>{
+            const targetContent = document.querySelector(toggleButton.dataset.target);
+
+            targetContent.classList.toggle("hidden");
+        });
+    });
+}
+
+
 displayGreeting();
+setupTabs();
+setupToggles();
