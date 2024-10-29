@@ -27,7 +27,7 @@ def login_view(request):
             if user is not None:
                 login(request, user)
                 messages.success(request, 'Login Successful')
-                return redirect('indexURL')
+                return redirect('dashboardURL')
             else:
                 messages.error(request, "Inavlid username or passowrd")
     else:
@@ -49,3 +49,5 @@ def signup_view(request):
 
     return render(request, "BuddyWorks/signup.html", {"form":form})
 
+def dashboard_view(request):
+    return render(request, 'BuddyWorks/dashboard.html')
