@@ -11,7 +11,7 @@ def index_view(request):
 def role_required(role):
     def decorator(view_func):
         #this user_pass... will fetch the user object and gonna return to lambda
-        @user_passes_test(lambda u: u.is_authenticated and u.role == role)
+        @user_passes_test(lambda u: u.is_authenticated and hasattr(u, 'profile') and u.profile.role == role)
         def _main_func(request, *args, **kwargs):
             return view_func(request, *args,**kwargs)
         return _main_func
@@ -34,6 +34,7 @@ def login_view(request):
         form = LoginForm()
     return render(request, 'BuddyWorks/login.html', {'form':form})
 
+@role_required('manager')
 def signup_view(request):
     if request.method == "POST":
         form = SignUpForm(request.POST)
@@ -47,3 +48,4 @@ def signup_view(request):
         form = SignUpForm()
 
     return render(request, "BuddyWorks/signup.html", {"form":form})
+
