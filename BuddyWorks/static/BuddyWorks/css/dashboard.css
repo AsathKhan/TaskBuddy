@@ -18,7 +18,7 @@ header h1{
 
 .tabs{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-top: 20px;
 }
 
@@ -27,10 +27,25 @@ header h1{
     background-color: rgb(29, 99, 164);
     color: white;
     cursor: pointer;
+    border-radius: 5px;
 }
 
 .tab.active{
     background-color: rgb(8, 66, 181);
+}
+
+.logout-button{
+    color: white;
+    background-color: rgb(234, 75, 75);
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-left: 80px;
+    border-radius: 4px;
+    box-shadow: 1px 1px 4px black;   
+}
+
+.logout-button:hover{
+    background-color: darkred;
 }
 
 .tab-content {

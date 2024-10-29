@@ -18,6 +18,12 @@
             <button class="tab active" data-target="#home">Home</button>
             <button class="tab" data-target="#profile">Profile</button>
             <button class="tab" data-target="#settings">Settings</button>
+
+            <form method="POST" action="{% url 'logoutURL' %}">
+                {% csrf_token %}
+                <button type="submit" class="logout-button">Logout</button>
+            </form>
+            
         </nav>
 
         <section id="home" class="tab-content hidden">
