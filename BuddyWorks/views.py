@@ -34,7 +34,7 @@ def login_view(request):
         form = LoginForm()
     return render(request, 'BuddyWorks/login.html', {'form':form})
 
-@role_required('manager')
+
 def signup_view(request):
     if request.method == "POST":
         form = SignUpForm(request.POST)
@@ -52,3 +52,6 @@ def signup_view(request):
 @login_required
 def dashboard_view(request):
     return render(request, 'BuddyWorks/dashboard.html')
+
+def about_view(request):
+    return render(request, "BuddyWorks/about.html")
