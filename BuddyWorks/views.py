@@ -57,3 +57,6 @@ def dashboard_view(request):
 
 def about_view(request):
     return render(request, "BuddyWorks/about.html")
+
+def privacy_policy_view(request):
+    return render(request, 'BuddyWorks/privacy_policy.html')

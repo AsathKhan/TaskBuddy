@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Privacy Policy{% endblock %}</title>
+    {% load static%}
+    <link rel="stylesheet" href="{% static 'BuddyWorks/css/privacy_policy.css' %}">
+</head>
+<body>
+    {% block content %}
+    <header>
+        <h1>Privacy Policy</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Introduction</h2>
+            <p>Your privacy is very important to us. This page explains how we collect, use, and protect your personal information.</p>
+        </section>
+
+        <section>
+            <h2>Information Collection</h2>
+            <p>We collect information that you provide directly to us, such as when you create an account or fill out forms.</p>
+        </section>
+
+        <section>
+            <h2>Usage of Information</h2>
+            <p>We use the information to provide, maintain, and improve our services and to communicate with you.</p>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 TaskBuddy. All rights reserved.</p>
+            <a href="">Terms of Service</a>
+        </footer>
+    </main>       
+    {% endblock %}
+</body>
+</html>
