@@ -18,8 +18,7 @@
                 <li><a href="">Home</a></li>
                 <li><a href="">services</a></li>
                 <li><a href="">support🎧</a></li>
-                <li><a href="">Contact📞</a></li>
-                <li><a href="">About</a></li>
+                <li><a href="{% url 'aboutURL' %}">About</a></li>
             </ul>
         </nav>
     </header>
@@ -42,8 +41,8 @@
 
         <section class="user">
             <h3>Get Started Now!</h3>
-            <a class="userBtn" href="">Log In</a>
-            <a class="userBtn" href="">Sign Up</a>
+            <a class="userBtn" href="{% url 'loginURL' %}">Log In</a>
+            <a class="userBtn" href="{% url 'signupURL' %}">Sign Up</a>
         </section>
     </main>
 

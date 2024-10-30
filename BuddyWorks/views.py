@@ -18,6 +18,8 @@ def role_required(role):
     return decorator
 
 def login_view(request):
+    if request.user.is_authenticated:
+        return redirect('dashboardURL')
     if request.method == "POST":
         form = LoginForm(request.POST)
         if form.is_valid():
