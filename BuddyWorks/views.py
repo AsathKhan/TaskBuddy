@@ -63,3 +63,6 @@ def privacy_policy_view(request):
 
 def terms_of_service_view(request):
     return render(request, 'BuddyWorks/terms_of_service.html')
+
+def support_view(request):
+    return render(request, 'BuddyWorks/support.html')

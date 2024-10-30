@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - TaskBuddy</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'BuddyWorks/css/support.css' %}">
+    <script src="{% static 'BuddyWorks/js/support.js' %}" defer></script>
+</head>
+<body>
+    <main>
+        <section class="support-section">
+            <h2>Support</h2>
+            <p>Welcome to the TaskBuddy Support page! We are here to help you with any issues you might have.</p>
+
+            <h3>Frequently Asked Questions (FAQs)</h3>
+            <ul class="faq-list">
+                <li><strong>How do I reset my password?</strong> You can reset your password by clicking on 'Forgot Password' at the login screen.</li>
+                <li><strong>How can I contact support?</strong> You can contact our support team via email at support@taskbuddy.com.</li>
+                <li><strong>Where can I find the user guide?</strong> The user guide can be found in the help section of the dashboard.</li>
+                <li><strong>What do I do if I encounter an error?</strong> Please take a screenshot of the error and send it to our support email for assistance.</li>
+                <li><strong>Can I change my username?</strong> Yes, you can change your username in the profile settings of your dashboard.</li>
+                <li><strong>How do I delete my account?</strong> If you wish to delete your account, please contact our support team for further assistance.</li>
+                <li><strong>Are there any tutorials available?</strong> Yes, we have a range of tutorials available in the help section of your dashboard.</li>
+                <li><strong>What should I do if I forget my username?</strong> If you've forgotten your username, you can recover it by clicking the 'Forgot Username' link on the login page.</li>
+                <li><strong>Is there a mobile app available?</strong> Currently, we only have a web application, but we are working on a mobile app for future release.</li>
+            </ul>
+
+            <h3>Contact Support</h3>
+            <p>If you need further assistance, you can reach out via email or chat with our support team directly:</p>
+            <ul>
+                <li>Email: <a href="mailto:asath2k2@gmail.com">support@taskbuddy.com</a></li>
+            </ul>
+
+            <h3>Chat with Support</h3>
+            <form id="chat-box" class="chat-form">
+                <label for="username">Your Name:</label>
+                <input type="text" id="username" name="username" placeholder="Enter your name" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" placeholder="Type your message here" rows="4" required></textarea>
+                
+                <button type="submit">Start Chat</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
