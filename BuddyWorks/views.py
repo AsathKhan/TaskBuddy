@@ -60,3 +60,6 @@ def about_view(request):
 
 def privacy_policy_view(request):
     return render(request, 'BuddyWorks/privacy_policy.html')
+
+def terms_of_service_view(request):
+    return render(request, 'BuddyWorks/terms_of_service.html')

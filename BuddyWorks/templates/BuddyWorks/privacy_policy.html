@@ -9,10 +9,10 @@
 </head>
 <body>
     {% block content %}
-    <header>
-        <h1>Privacy Policy</h1>
-    </header>
     <main>
+        <header>
+            <h1>Privacy Policy</h1>
+        </header>
         <section>
             <h2>Introduction</h2>
             <p>Your privacy is very important to us. This page explains how we collect, use, and protect your personal information.</p>
@@ -30,7 +30,7 @@
 
         <footer>
             <p>&copy; 2024 TaskBuddy. All rights reserved.</p>
-            <a href="">Terms of Service</a>
+            <a href="{% url 'terms-of-serviceURL' %}">Terms of Service</a>
         </footer>
     </main>       
     {% endblock %}
