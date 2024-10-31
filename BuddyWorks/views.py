@@ -78,3 +78,6 @@ def support_view(request):
         else:
             messages.error(request, "please fill in all fields")
     return render(request, 'BuddyWorks/support.html')
+
+def service_view(request):
+    return render(request, 'BuddyWorks/service.html')

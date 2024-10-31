@@ -1,81 +1,97 @@
-*{
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #76c7c0, #fad06c); 
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body{
-    background-color: whitesmoke;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     height: 100vh;
-    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.signup-container{
-    background-color: white;
-    color: black;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow:  0 4px 8px black;
+.signup-container {
+    width: 100%;
     max-width: 400px;
-}
-
-h1{
-    color: rgb(218, 75, 75);
-    margin-bottom: 1.5rem;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
-form{
+.signup-container h1 {
+    font-size: 2rem;
+    margin-bottom: 1em;
+    color: #333;
+}
+
+
+form {
     display: flex;
     flex-direction: column;
 }
 
-label{
-    color: black;
-    margin-bottom: 0.3rem;
+label {
+    font-weight: bold;
+    margin-top: 10px;
+    color: #333;
 }
 
-input{
-    margin-bottom: 0.5rem;
-    border-color: yellowgreen;
+input[type="text"], input[type="email"], input[type="password"] {
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #333;
+    transition: border-color 0.2s;
 }
 
-button{
-    padding: 0.8rem;
-    font-size: 16px ;
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus {
+    border-color: #76c7c0;
+    outline: none;
+}
+
+button[type="submit"] {
+    background-color: #76c7c0;
     color: white;
-    background-color: rgb(32, 32, 189);
+    padding: 12px;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
+    margin-top: 20px;
+    font-size: 1.1rem;
     cursor: pointer;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
+    transition: background-color 0.2s;
 }
 
-button:hover{
-    background-color: rgb(77, 77, 176);
+button[type="submit"]:hover {
+    background-color: #5ca8a3;
 }
 
-.login-link{
-    margin-top: 1rem;
-    font-size: 14px;
-    text-align: center;
-    color: black;
+
+.signup-container ul {
+    list-style: none;
+    padding: 0;
+    color: #ff4d4d;
+    margin-top: 15px;
 }
 
-.login-link a{
-    color: rgb(46, 66, 218);
+.signup-container li {
+    font-size: 0.9rem;
+}
+
+
+.login-link {
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+.login-link a {
+    color: #76c7c0;
     text-decoration: none;
+    font-weight: bold;
 }
 
-.login-link a:hover{
+.login-link a:hover {
     text-decoration: underline;
-}
-
-li{
-    margin-top: 0.5rem;
-    color: darkmagenta;
 }
