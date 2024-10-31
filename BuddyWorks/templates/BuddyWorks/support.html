@@ -6,7 +6,6 @@
     <title>Support - TaskBuddy</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'BuddyWorks/css/support.css' %}">
-    <script src="{% static 'BuddyWorks/js/support.js' %}" defer></script>
 </head>
 <body>
     <main>
@@ -34,7 +33,8 @@
             </ul>
 
             <h3>Chat with Support</h3>
-            <form id="chat-box" class="chat-form">
+            <form id="chat-box" class="chat-form" method="POST" action="{% url 'supportURL' %}">
+                {% csrf_token %}
                 <label for="username">Username(if not Name):</label>
                 <input type="text" id="username" name="username" placeholder="Enter your name" required>
                 
