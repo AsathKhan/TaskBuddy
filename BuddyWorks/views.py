@@ -77,5 +77,4 @@ def support_view(request):
             return redirect('supportURL')
         else:
             messages.error(request, "please fill in all fields")
-            return redirect('supportURL')
     return render(request, 'BuddyWorks/support.html')
