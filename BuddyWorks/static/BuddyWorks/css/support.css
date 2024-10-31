@@ -97,3 +97,25 @@ strong {
 .chat-form button:hover {
     background-color: #388e3c;
 }
+
+.message-box {
+    font-size: 1rem;
+    margin-top: 10px;
+    padding: 10px;
+    text-align: center;
+    display: none;
+}
+
+.message-box.success {
+    color: #388e3c;
+    background-color: #e8f5e9;
+    border: 1px solid #388e3c;
+    border-radius: 5px;
+}
+
+.message-box.error {
+    color: #d32f2f;
+    background-color: #ffebee;
+    border: 1px solid #d32f2f;
+    border-radius: 5px;
+}

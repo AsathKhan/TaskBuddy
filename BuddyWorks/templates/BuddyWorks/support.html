@@ -35,14 +35,19 @@
 
             <h3>Chat with Support</h3>
             <form id="chat-box" class="chat-form">
-                <label for="username">Your Name:</label>
+                <label for="username">Username(if not Name):</label>
                 <input type="text" id="username" name="username" placeholder="Enter your name" required>
                 
+                <label for="email">Email:</label>
+                <input id="email" type="email" name="email" placeholder="Enter your email">
+
                 <label for="message">Message:</label>
-                <textarea id="message" name="message" placeholder="Type your message here" rows="4" required></textarea>
+                <textarea id="message" type="text" name="message" placeholder="Type your message here" rows="4" required></textarea>
                 
-                <button type="submit">Start Chat</button>
+                <button type="submit">send message</button>
             </form>
+
+            <div id="form-messages"  class="message-box"></div>
         </section>
     </main>
 </body>
