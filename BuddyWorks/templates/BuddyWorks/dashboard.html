@@ -18,6 +18,7 @@
             <button class="tab active" data-target="#home">Home</button>
             <button class="tab" data-target="#profile">Profile</button>
             <button class="tab" data-target="#settings">Settings</button>
+            <button class="tab" data-target="#task-overview">Task Overview</button>
 
             <form method="POST" action="{% url 'logoutURL' %}">
                 {% csrf_token %}
@@ -41,13 +42,18 @@
             <p>configure your account settings and preferences here.</p>
         </section>
 
+        <section id="task-overview" class="tab-content hidden">
+            <h2>Task Overview</h2>
+            <div id="task-overview-content">{% include 'BuddyWorks/task_overview.html'%}</div>
+        </section>
+
         <button class="toggle-button" data-target="#extra-content">Toggle Extra Content</button>
 
         <div id="extra-content" class="hidden">
             <h2>Extra content</h2>
             <p>This section can be toggled on and off</p>
         </div>
-        
+       
     </div>
     
 </body>

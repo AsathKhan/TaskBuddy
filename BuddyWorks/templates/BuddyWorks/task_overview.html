@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Overview</title>
+</head>
+<body>
+    <section>
+        <h2> Task Overview</h2>
+
+        <div class="task-summary">
+            <div class="summary-item" id="pending-tasks">
+                <h3>Pending</h3>
+                <p><span id="pending-count">0</span> tasks</p>
+            </div>
+            <div class="summary-item" id="in-progress-tasks">
+                <h3 >In Progress</h3>
+                <p><span id="in-progress-count">0</span> tasks</p>
+            </div>
+            <div class="summary-item" id="completed-tasks">
+                <h3>Completed</h3>
+                <p><span id="completed-count">0</span> tasks</p>
+            </div>
+        </div>
+
+        <div class="task-filters">
+            <label for="task-filter">Filter by:</label>
+            <select id="task-filter">
+                <option value="all">All</option>
+                <option value="deadline">Deadline</option>
+                <option value="priority">Priority</option>
+                <option value="category">Category</option>
+            </select>
+        </div>
+    </section>
+    
+</body>
+</html>
