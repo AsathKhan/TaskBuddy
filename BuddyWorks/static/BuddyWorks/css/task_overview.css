@@ -1,0 +1,121 @@
+#task-overview {
+    background: linear-gradient(to bottom right, #8d4fcf, #32b99c);
+    padding: 2rem;
+    color: #f0f0f0;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+#task-overview h2 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+#task-overview-content {
+    margin-top: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.task-stats, .task-filters, .task-list {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 1rem;
+    border-radius: 10px;
+    backdrop-filter: blur(12px);
+}
+
+.task-stats h3, .task-filters h3, .task-list h3 {
+    color: #e0e0e0;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+
+.progress-bar-container {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+    height: 12px;
+    margin-top: 0.6rem;
+}
+
+.progress-bar {
+    height: 100%;
+    transition: width 0.4s ease;
+}
+
+.progress-bar.pending { background-color: #ffd54f; }
+.progress-bar.in-progress { background-color: #42a5f5; }
+.progress-bar.completed { background-color: #66bb6a; }
+
+
+.task-filters select, .task-filters input[type="date"] {
+    background: rgba(255, 255, 255, 0.85);
+    color: #333;
+    padding: 0.6rem;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.task-filters select:hover, .task-filters input[type="date"]:hover {
+    background: rgba(255, 255, 255, 1);
+}
+
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem;
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    border-radius: 8px;
+    transition: background 0.4s ease;
+}
+
+.task-item:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.task-item .task-title {
+    font-weight: bold;
+    color: #ffca28;
+}
+
+.task-item .task-status {
+    padding: 0.4rem 0.6rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+}
+
+.task-item .task-status.urgent { background: #ef5350; }
+.task-item .task-status.high { background: #ffca28; }
+.task-item .task-status.medium { background: #42a5f5; }
+.task-item .task-status.low { background: #66bb6a; }
+
+#task-overview:hover {
+    transform: scale(1.03);
+}
+
+#extra-content {
+    background-color: rgba(0, 0, 0, 0.15);
+    padding: 1.8rem;
+    border-radius: 10px;
+    color: #ffca28;
+    text-align: center;
+}
