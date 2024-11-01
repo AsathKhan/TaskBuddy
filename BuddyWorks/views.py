@@ -3,7 +3,8 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import user_passes_test, login_required
 from django.contrib import messages
 from .forms import LoginForm, SignUpForm
-from .models import SupportMessage
+from .models import SupportMessage, Task
+from django.http import JsonResponse
 
 # Create your views here.
 def index_view(request):
@@ -81,3 +82,14 @@ def support_view(request):
 
 def service_view(request):
     return render(request, 'BuddyWorks/service.html')
+
+def task_overview_view(request):
+    pending = Task.objects.filter(status="pending").count()
+    in_progress = Task.objects.filter(status="in_progress").count()
+    completed = Task.objects.filter(status="completed").count()
+    
+    return JsonResponse({
+        "pending": pending,
+        "inProgress": in_progress,
+        "completed": completed
+    })

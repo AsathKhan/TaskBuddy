@@ -2,7 +2,7 @@ from django.urls import path
 from django.contrib.auth.views import LogoutView
 from BuddyWorks.views import index_view
 from .views import login_view, signup_view
-from .views import dashboard_view
+from .views import dashboard_view, task_overview_view
 from .views import privacy_policy_view, terms_of_service_view
 from .views import about_view, support_view, service_view
 
@@ -17,4 +17,5 @@ urlpatterns=[
     path('terms-of-service/', terms_of_service_view, name="terms-of-serviceURL"),
     path('support/', support_view, name="supportURL"),
     path('service', service_view, name="serviceURL"),
+    path('task-overview/', task_overview_view, name='task-overviewURL'),
 ]
