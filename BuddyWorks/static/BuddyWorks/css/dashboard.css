@@ -51,7 +51,7 @@ header h1{
 .tab-content {
     margin-top: 20px;
     padding: 15px;
-    background: rgb(160, 110, 110);
+    background: rgb(193, 123, 204);
     border: 1px solid rgb(245, 245, 245);
     border-radius: 8px;
 }
@@ -69,5 +69,13 @@ header h1{
     cursor: pointer;
     display: block;
     width: 100%;
+    text-align: center;
+}
+
+#extra-content {
+    background-color: rgba(0, 0, 0, 0.15);
+    padding: 1.8rem;
+    border-radius: 10px;
+    color: #ba9050;
     text-align: center;
 }

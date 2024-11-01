@@ -8,7 +8,7 @@ body {
 section {
     max-width: 800px;
     margin: auto;
-    background: linear-gradient(to bottom right, #8d4fcf, #32b99c);
+    background: linear-gradient(to bottom right, #b492d8, #32b99c);
     padding: 2rem;
     color: #f0f0f0;
     border-radius: 12px;
@@ -94,10 +94,3 @@ section:hover {
     transform: scale(1.03);
 }
 
-#extra-content {
-    background-color: rgba(0, 0, 0, 0.15);
-    padding: 1.8rem;
-    border-radius: 10px;
-    color: #ffca28;
-    text-align: center;
-}
