@@ -9,7 +9,15 @@
     <script src="{% static 'Games/js/dice_roller.js' %}" defer></script>
 </head>
 <body>
+    <header>
+        <div class="logo">
+            <a href="{% url 'indexURL' %}"><h1>Task<span>Buddy</span></h1></a>
+        </div>
+        <a href=""><h2 class="games">Games</h2></a>
+    </header>
+
     <div class="container">
+        <h2>DiceRoller</h2>
         <div class="dice">
             <div class="face front"></div>
             <div class="face back"></div>
