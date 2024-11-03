@@ -11,12 +11,13 @@
 <body>
     <header>
         <div class="logo">
-            <h1>Task<span id="logoSpan">Buddy</span></h1>
+            <h1>Task<span>Buddy</span></h1>
         </div>
         <nav>
             <ul>
-                <li><a href="{% url 'serviceURL' %}">services</a></li>
-                <li><a href="{% url 'supportURL' %}">support🎧</a></li>
+                <li><a href="{% url 'serviceURL' %}">Services</a></li>
+                <li><a href="{% url 'games_hubURL' %}">GamesHub</a></li>
+                <li><a href="{% url 'supportURL' %}">Support</a></li>
                 <li><a href="{% url 'aboutURL' %}">About</a></li>
             </ul>
         </nav>

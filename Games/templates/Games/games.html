@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games Hub</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'Games/css/games.css' %}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="{% url 'indexURL' %}"><h1>Task<span>Buddy</span></h1></a>
+        </div>
+        <h2 class="games-title">GamesHub</h2>
+    </header>
+
+    <div class="container">
+        <div class="game-card">
+            <img src="" alt="Dice" class="game-image">
+            <h3>DiceRoller</h3>
+            <a href="{% url 'dice_rollerURL' %}" class="game-link">Play Now</a>
+        </div>
+        <div class="game-card">
+            <img src="" alt="Dice" class="game-image">
+            <h3>Ro-sham-bo</h3>
+            <a href="" class="game-link">Play Now</a>
+        </div>
+        <div class="game-card">
+            <img src="" alt="Dice" class="game-image">
+            <h3>Turtle Game</h3>
+            <a href="" class="game-link">Play Now</a>
+        </div>
+        
+    </div>
+</body>
+</html>
