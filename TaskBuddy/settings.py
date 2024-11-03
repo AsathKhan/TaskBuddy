@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'BuddyWorks',
+    'Games',
 ]
 
 MIDDLEWARE = [
@@ -57,7 +58,8 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            os.path.join(BASE_DIR,'BuddyWorks/templates')
+            os.path.join(BASE_DIR,'BuddyWorks/templates'),
+            os.path.join(BASE_DIR, 'Games/templates'),
             ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -121,7 +123,8 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIR = [
-    os.path.join(BASE_DIR, "BuddyWorks/static")
+    os.path.join(BASE_DIR, "BuddyWorks/static"),
+    os.path.join(BASE_DIR, 'Games/static')
 ]
 
 # Default primary key field type
