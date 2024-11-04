@@ -9,13 +9,21 @@
     <script src="{% static 'Games/js/Ro_sham_po.js' %}" defer></script>
 </head>
 <body>
+
+    <header>
+        <div class="logo">
+            <a href="{% url 'indexURL' %}"><h1>Task<span>Buddy</span></h1></a>
+        </div>
+        <a href="{% url 'games_hubURL' %}"><h2 class="games">GamesHub</h2></a>
+    </header>
+    
     <div class="container">
-        
+
         <h1>Ro-sham-po</h1>
         <div class="choices">
-            <button onclick="">🪨</button>
-            <button onclick="">🧻</button>
-            <button onclick="">✂️</button>
+            <button>🪨</button>
+            <button>🧻</button>
+            <button>✂️</button>
         </div>
 
         <div id="playerDisplay">PLAYER:</div>
