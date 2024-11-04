@@ -6,3 +6,6 @@ def games_hub_view(request):
 
 def dice_roller_view(request):
     return render(request, 'Games/dice_roller.html')
+
+def ro_sham_po_view(request):
+    return render(request, 'Games/Ro_sham_po.html')
